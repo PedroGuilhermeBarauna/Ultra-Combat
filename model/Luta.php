@@ -1,5 +1,7 @@
 <?php 
 	require_once "Lutador.php";
+	require_once "LutadorCRUD.php";
+	$lutadorCRUD = new LutadorCRUD();
 	//inico da class Luta.
 	class Luta{
 		private $desafiado;
@@ -70,12 +72,13 @@
 		//fim da função marcarLuta.
 
 		//inico da função lutar.
-		public function lutar(){
-			$sorte = rand(0,10);
+		public function lutar(){	
+			$sorteDesafiante = rand(0,40);
+			$sorteDesafiado = rand(0,40);
 
-			$habilidadeANT = ($this->desafiante->getPeso() * 0.1) + $this->desafiante->getIdade() + $this->desafiante->getHabilidade();
+			$habilidadeANT = ($this->desafiante->getPeso() * 0.3) + $this->desafiante->getIdade() + $this->desafiante->getHabilidade();
 
-			$habilidadeADO = ($this->desafiado->getPeso() * 0.1) + $this->desafiado->getIdade() + $this->desafiado->getHabilidade();
+			$habilidadeADO = ($this->desafiado->getPeso() * 0.3) + $this->desafiado->getIdade() + $this->desafiado->getHabilidade();
 
 			if (($this->desafiante->getDerrotas() != 0) AND $this->desafiado->getDerrotas() != 0){
 				$historicoANT = $this->desafiante->getVitorias() / $this->desafiante->getDerrotas();
@@ -86,18 +89,18 @@
 				$historicoADO = 0;
 			}
 			if (
-				(($habilidadeANT * 0.3) + (rand(0,30) * 0.3) + ($historicoANT * 0.4))
-				<
-				(($habilidadeADO * 0.3) + (rand(0,30) * 0.3) + ($historicoADO * 0.4))
+				(($habilidadeANT * 0.3) + $sorteDesafiante + ($historicoANT * 0.4))
+				>
+				(($habilidadeADO * 0.3) + $sorteDesafiado + ($historicoADO * 0.4))
 			){
 				$this->desafiante->ganharLuta();
 				$this->setGanhador($this->desafiante);
 				$this->desafiado->perderLuta();
 			}
 			elseif(
-				(($habilidadeANT * 0.3) + (rand(0,30) * 0.3) + ($historicoANT * 0.4))
-				>
-				(($habilidadeADO * 0.3) + (rand(0,30) * 0.3) + ($historicoADO * 0.4))
+				(($habilidadeANT * 0.3) + $sorteDesafiante + ($historicoANT * 0.4))
+				<
+				(($habilidadeADO * 0.3) + $sorteDesafiado + ($historicoADO * 0.4))
 			){
 				$this->desafiado->ganharLuta();
 				$this->setGanhador($this->desafiado);

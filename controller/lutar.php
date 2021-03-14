@@ -13,12 +13,12 @@
 	$idDesafiante = $luta[0]["desafiante"];
 	$desafiante = $lutadorCRUD->get($idDesafiante);
 
-	$desafiante = new Lutador($desafiante['nome'],$desafiante['nacionalidade'],$desafiante['nascimento'], $desafiante['altura'],$desafiante['peso'],$desafiante['apelido']);
+	$desafiante = new Lutador($desafiante['nacionalidade'], $desafiante['nascimento'], $desafiante['altura'], $desafiante['peso'], $desafiante['vitorias'], $desafiante['derrotas'], $desafiante['empates'], $desafiante['nome'], $desafiante['apelido']);
 
 	$idDesafiado = $luta[0]["desafiado"];
 	$desafiado = $lutadorCRUD->get($idDesafiado);
 
-	$desafiado = new Lutador($desafiado['nome'],$desafiado['nacionalidade'],$desafiado['nascimento'], $desafiado['altura'],$desafiado['peso'],$desafiado['apelido']);
+	$desafiado = new Lutador($desafiado['nacionalidade'], $desafiado['nascimento'], $desafiado['altura'], $desafiado['peso'], $desafiado['vitorias'], $desafiado['derrotas'], $desafiado['empates'], $desafiado['nome'], $desafiado['apelido']);
 
 
 	$luta = new Luta($desafiante, $desafiado);
@@ -43,9 +43,6 @@
 			$lutaCRUD->update($idDesafiado,$_GET["lutar"]);
 		}
 	}
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,5 +57,3 @@
 
 </body>
 </html>
-
-

@@ -19,18 +19,18 @@
 		//MÉTODOS ESPECIAIS.
 
 		//inicio do construct.
-		public function __construct ($nome,$nacionalidade,$nascimento,$altura,$peso,$apelido){
-			$this->setNome($nome);
+		public function __construct ($nacionalidade, $nascimento, $altura, $peso, $vitorias, $derrotas, $empates, $nome,$apelido){
 			$this->setNacionalidade($nacionalidade);
 			$this->setNascimento($nascimento);
 			$this->setAltura($altura);
 			$this->setPeso($peso);
-			$this->setCategoria();
-			$this->setVitorias(0);
-			$this->setDerrotas(0);
-			$this->setEmpates(0);
+			$this->setVitorias($vitorias);
+			$this->setDerrotas($derrotas);
+			$this->setEmpates($empates);
+			$this->setNome($nome);
 			$this->setApelido($apelido);
 
+			$this->setCategoria();
 			$this->habilidade = ($this->getPeso() * 0.1) + $this->getIdade();
 		}
 		//fim do construct.
