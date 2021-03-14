@@ -1,7 +1,5 @@
 <div class="ui three column grid container">
   <div class="column">
-    <p></p>
-    <p></p>
   </div>
   <div class="column">
     <form id="formularioLuta" action="../controller/cadastrarLuta.php" method="post" class="ui form segment">

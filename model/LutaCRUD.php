@@ -29,7 +29,6 @@
 			$consulta->execute();
 			$linha = $consulta->fetchall(PDO::FETCH_ASSOC);
 			return $linha;
-
 		}
 		//fim da função get.
 

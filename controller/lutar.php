@@ -25,6 +25,7 @@
 
 
 	$luta->lutar();
+	
 	//update ganhador
 	$lutadorCRUD->update($desafiante,$idDesafiante);
 	$lutadorCRUD->update($desafiado,$idDesafiado);
