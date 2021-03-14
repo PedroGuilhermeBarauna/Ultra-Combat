@@ -12,6 +12,3 @@
 	$lutaCRUD->insert($luta);
 	header("location: ../view/index.php");
 ?>
-</pre>
-</body>
-</html>
