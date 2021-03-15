@@ -56,7 +56,6 @@
 			$contadorAux = count($historico[0]);
 
 			for ($p = 0;$p < $contadorAux; $p++){
-
 			$trinta = $historico[0][$p];
 			$sql = "select lutador.nome from lutador, luta where $trinta = lutador.id group by lutador.nome";
 			$consulta = $this->conexao->prepare($sql);
@@ -78,7 +77,7 @@
 			}
 			$resultado['desafiados']  = $nomesDesafiados;
 			$resultado['desafiantes'] = $nomesDesafiantes;
-			$resultado['id']		  = $id;
+
 
 			return $resultado;
 	
