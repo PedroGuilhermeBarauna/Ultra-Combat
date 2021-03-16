@@ -14,6 +14,12 @@
           <td><?php echo $lutas[0]['desafiante']; ?></td>
           <td class="right aligned"><?php echo $lutas[0]['ganhador'];?></td>
         </tr>
+
+        <tr>
+          <td><?php echo $lutas[1]['desafiado']; ?></td>
+          <td><?php echo $lutas[1]['desafiante']; ?></td>
+          <td class="right aligned"><?php echo $lutas[1]['ganhador'];?></td>
+        </tr>
       </tbody>
     </table>
   </div>
