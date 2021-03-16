@@ -7,6 +7,26 @@
     $contador = count($nomes['desafiantes']);
 
     $historico = $lutaCRUD->getAll();
+
+    $historicoNomes = [
+        "desafiados" => null,
+        "desafiantes" => null,
+        "ganhador" => null
+    ];
+
+
+    $historicoNomes['desafiados'][] = $lutadorCRUD->get($historico[0]['desafiado']);
+    $historicoNomes['desafiantes'][] = $lutadorCRUD->get($historico[0]['desafiante']);
+
+    if ($historico[0]["ganhador"] == $historicoNomes["desafiados"][0]["id"]){
+        $historicoNomes["ganhador"] = $historicoNomes["desafiados"][0]["apelido"];
+    }
+    else {
+        $historicoNomes["ganhador"] = $historicoNomes["desafiantes"][0]["apelido"];
+    }
+
+    $historicoNomes["desafiados"] = $historicoNomes["desafiados"][0]["apelido"];
+    $historicoNomes["desafiantes"] = $historicoNomes["desafiantes"][0]["apelido"];
  ?>
 <div id="tabelaLutar" class="ui two column grid container">
   <div class="column">
@@ -19,9 +39,9 @@
           <td class="right aligned">Ganhador</td>
         </tr>
         <tr>
-          <td><?php echo $historico[0]["desafiante"]; ?></td>
-          <td><?php echo $historico[0]["desafiado"];?></td>
-          <td class="right aligned"><?php echo $historico[0]["ganhador"];?></td>
+          <td><?php echo $historicoNomes['desafiantes']; ?></td>
+          <td><?php echo $historicoNomes["desafiados"];?></td>
+          <td class="right aligned"><?php echo $historicoNomes["ganhador"];?></td>
         </tr>
 
         <tr>
@@ -51,11 +71,3 @@
     </table>
   </div>
 </div>
-
-
-
-
-
-
-
-
