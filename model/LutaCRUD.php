@@ -33,6 +33,7 @@
 		//fim da função get.
 
 		public function getLutasMarcadas (){
+		    $id = null;
 			$desafiantes = array();
 			$desafiados = array();
 			$nomesDesafiantes = array();
@@ -56,7 +57,6 @@
 			$contadorAux = count($historico[0]);
 
 			for ($p = 0;$p < $contadorAux; $p++){
-
 			$trinta = $historico[0][$p];
 			$sql = "select lutador.nome from lutador, luta where $trinta = lutador.id group by lutador.nome";
 			$consulta = $this->conexao->prepare($sql);
@@ -78,10 +78,11 @@
 			}
 			$resultado['desafiados']  = $nomesDesafiados;
 			$resultado['desafiantes'] = $nomesDesafiantes;
-			$resultado['id']		  = $id;
+			$resultado['id'] = $id;
+
+
 
 			return $resultado;
-	
 		}
 
 
@@ -91,7 +92,6 @@
 			$consulta->execute();
 			$linha = $consulta->fetchall(PDO::FETCH_ASSOC);
 			return $linha;
-
 		}
 		//fim da função getAll.
 
@@ -101,7 +101,6 @@
             ganhador = '".$idGanhador."'
             where id = ".$idLuta;
             $this->conexao->exec($sql);
-
 		}
 		//fim da função update.
 

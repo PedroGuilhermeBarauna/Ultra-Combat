@@ -1,8 +1,12 @@
 <?php  
 	require_once "../model/lutaCRUD.php";
+	require_once "../model/lutadorCRUD.php";
+	$lutadorCRUD = new LutadorCRUD();
 	$lutaCRUD = new lutaCRUD();
 	$nomes = $lutaCRUD->getLutasMarcadas();
-  $contador = count($nomes['desafiantes']);
+    $contador = count($nomes['desafiantes']);
+
+    $historico = $lutaCRUD->getAll();
  ?>
 <div id="tabelaLutar" class="ui two column grid container">
   <div class="column">
@@ -15,9 +19,9 @@
           <td class="right aligned">Ganhador</td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td class="right aligned"></td>
+          <td><?php echo $historico[0]["desafiante"]; ?></td>
+          <td><?php echo $historico[0]["desafiado"];?></td>
+          <td class="right aligned"><?php echo $historico[0]["ganhador"];?></td>
         </tr>
 
         <tr>
