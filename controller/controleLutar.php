@@ -14,19 +14,26 @@
         "ganhador" => null
     ];
 
+    $contadorHistorico = count($historico);
 
-    $historicoNomes['desafiados'][] = $lutadorCRUD->get($historico[0]['desafiado']);
-    $historicoNomes['desafiantes'][] = $lutadorCRUD->get($historico[0]['desafiante']);
+    if ($contadorHistorico != 0){
+        $historicoNomes['desafiados'][] = $lutadorCRUD->get($historico[0]['desafiado']);
+        $historicoNomes['desafiantes'][] = $lutadorCRUD->get($historico[0]['desafiante']);
 
-    if ($historico[0]["ganhador"] == $historicoNomes["desafiados"][0]["id"]){
-        $historicoNomes["ganhador"] = $historicoNomes["desafiados"][0]["apelido"];
+        if ($historico[0]["ganhador"] != null){
+            if ($historico[0]["ganhador"] == $historicoNomes["desafiados"][0]["id"]){
+                $historicoNomes["ganhador"] = $historicoNomes["desafiados"][0]["apelido"];
+            }
+            else {
+                $historicoNomes["ganhador"] = $historicoNomes["desafiantes"][0]["apelido"];
+            }
+        }
+
+
+        $historicoNomes["desafiados"] = $historicoNomes["desafiados"][0]["apelido"];
+        $historicoNomes["desafiantes"] = $historicoNomes["desafiantes"][0]["apelido"];
     }
-    else {
-        $historicoNomes["ganhador"] = $historicoNomes["desafiantes"][0]["apelido"];
-    }
 
-    $historicoNomes["desafiados"] = $historicoNomes["desafiados"][0]["apelido"];
-    $historicoNomes["desafiantes"] = $historicoNomes["desafiantes"][0]["apelido"];
  ?>
 <div id="tabelaLutar" class="ui two column grid container">
   <div class="column">

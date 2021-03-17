@@ -73,8 +73,8 @@
 
 		//inico da função lutar.
 		public function lutar(){	
-			$sorteDesafiante = rand(0,40);
-			$sorteDesafiado = rand(0,40);
+			$sorteDesafiante = rand(0,70);
+			$sorteDesafiado = rand(0,70);
 
 			$habilidadeANT = ($this->desafiante->getPeso() * 0.3) + $this->desafiante->getIdade() + $this->desafiante->getHabilidade();
 

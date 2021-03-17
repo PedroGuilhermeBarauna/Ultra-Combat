@@ -12,10 +12,13 @@
       .masthead.segment {
         min-height: 700px;
         padding: 1em 0em;
-      } 
+      }
+      .pusher {
+          margin-bottom: 30px;
+      }
     </style>
 
-  </head> 
+  </head>
 
   <body>
     <div id="menuEcorpo" class="ui inverted vertical masthead center aligned segment">
@@ -23,7 +26,7 @@
         <div class="ui container">
             <div class="ui large secondary inverted pointing menu">
             <div class="left item">
-              <a href="index.php" class="ui inverted button withe">Página Inicial</a>
+              <a id="index" class="ui inverted button withe">Página Inicial</a>
               <a id="marcarLuta" class="ui inverted button yellow">Marcar luta</a>
               <a id="lutar" class="ui inverted button red">Lutar</a>
             </div>
@@ -32,9 +35,9 @@
             </div>
           </div>
         </div>
-      </div> 
+      </div>
       <div id="corpoIndex">
-        
+
       </div>
     </div>
   </body>
