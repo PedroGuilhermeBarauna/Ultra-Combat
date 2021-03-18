@@ -6,9 +6,8 @@
 	class Luta{
 		private $desafiado;
 		private $desafiante;
-		private $rounds;
-		private $comentario;
 		private $ganhador;
+		private $status
 
 		//Métodos especiais.
 
@@ -31,19 +30,7 @@
 		public function setDesafiante($desafiante) {
 		    $this->desafiante = $desafiante;
 		}
-		public function getRounds() {
-		    return $this->rounds;
-		}
-		private function setRounds($rounds) {
-		    $this->rounds = $rounds;
-		}
-		public function getComentario() {
-		    return $this->comentario;
-		}
-		 
-		public function setComentario($comentario) {
-		    $this->comentario = $comentario;
-		}
+
 		public function getGanhador() {
 		    return $this->ganhador;
 		}
@@ -51,6 +38,13 @@
 		public function setGanhador($ganhador) {
 		    $this->ganhador = $ganhador;
 		}
+        public function getStatus() {
+            return $this->ganhador;
+        }
+
+		public function setStatus($status) {
+            $this->status = $status;
+        }
 
 		//Inico métodos.
 
