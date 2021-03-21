@@ -1,8 +1,7 @@
 <?php 
 	require_once "../interfaces/Controlador.php";
-	//inicio da classe lutador
+
 	class Lutador implements Controlador{
-		//atributos.
 		private $id;
 		private $nome;
 		private $nacionalidade;
@@ -16,9 +15,6 @@
 		private $habilidade;
 		private $apelido;
 
-		//MÉTODOS ESPECIAIS.
-
-		//inicio do construct.
 		public function __construct ($nacionalidade, $nascimento, $altura, $peso, $vitorias, $derrotas, $empates, $nome,$apelido){
 			$this->setNacionalidade($nacionalidade);
 			$this->setNascimento($nascimento);
@@ -31,11 +27,8 @@
 			$this->setApelido($apelido);
 
 			$this->setCategoria();
-			$this->habilidade = ($this->getPeso() * 0.1) + $this->getIdade();
+			$this->setHabilidade();
 		}
-		//fim do construct.
-
-		//inicio dos getters e setters.
 		public function getId() {
 		    return $this->id;
 		}
@@ -77,7 +70,6 @@
 		public function getCategoria() {
 		    return $this->categoria;
 		}
-		//inicio da função setCategoria
 		public function setCategoria() {
 			//inico testa a faixa de peso.
 		    $peso = $this->peso;
@@ -96,9 +88,8 @@
 		    else{
 				$this->categoria = "invalido";
 		    }
-		    //fim testa a faixa de peso.
+
 		}
-		//fim da função getCategoria
 		public function getVitorias() {
 		    return $this->vitorias;
 		}
@@ -120,56 +111,30 @@
 		public function getHabilidade() {
 		    return $this->habilidade;
 		}
-		public function setHabilidade($habilidade) {
-		    $this->habilidade = $habilidade;
+		public function setHabilidade() {
+		    $this->habilidade = ($this->getPeso() * 0.1) + $this->getIdade();
 		}
 		public function getApelido() {
 		    return $this->apelido;
 		}
-		 
 		public function setApelido($apelido) {
 		    $this->apelido = $apelido;
 		}
-
-		//inicio dos metodos da interface.
-
-		//inicio da função getIdade
 		public function getIdade(){
 			$nascimento = explode('-', $this->nascimento);
 			$anoAtual = date('Y');
 			$idade = $anoAtual - $nascimento[0];
 			return $idade;
 			}
-		//inicio da função ganharLuta.
 		public function ganharLuta(){
 			$this->setVitorias($this->getVitorias() + 1);
 		}
-		//fim da função ganharLuta.
-
-		//inicio da função perderluta.
 		public function perderLuta(){
 			$this->setDerrotas($this->getDerrotas() + 1);
 		}
-		//fim da função perderluta.
-
-		//inicio da função empatarLuta.
 		public function empatarLuta(){
 			$this->setEmpates($this->getEmpates() + 1);
 
 		}
-		//fim da função empatarLuta.
-
-		//inico da função treinar
-		public function treinar(){
-			$this->setHabilidade($this->getHabilidade() + 1);
-			$this->setPeso($this->getPeso() - 0.5);
-		}
-		//fim da função treinar
-
-
-
 	}
-	//fim da classe lutador.
-	
-
 ?>

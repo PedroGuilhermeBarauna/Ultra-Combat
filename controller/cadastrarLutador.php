@@ -1,5 +1,6 @@
 <?php
 	require_once "../model/LutadorCRUD.php";
+
 	$lutador = new Lutador(
 		$_POST["nacionalidade"],
 		$_POST["nascimento"],
@@ -11,7 +12,7 @@
 		$_POST["nome"],
 		$_POST["apelido"]
 	);
-	$LutadorCRUID = new LutadorCRUD();
-	$LutadorCRUID->insert($lutador);
+	$LutadorCRUD = new LutadorCRUD();
+	$LutadorCRUD->insert($lutador);
 	header("location: ../view/index.php?");
 ?>

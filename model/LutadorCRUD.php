@@ -1,15 +1,15 @@
 <?php 
-	require_once "conexao.php";
+	require_once "Conexao.php";
 	require_once "Lutador.php";
 	require_once "../interfaces/CRUD.php";	
-	//inicio da classe LutadorCRUD.
+
 	class LutadorCRUD implements CRUD {
 		private $conexao;
 
 		public function __construct(){
 			$this->conexao = conexao::getConexao();
 		}
-		//inicio da função insert.
+
 		public function insert($lutador){
 			$nome = $lutador->getNome();
 			$nacionalidade = $lutador->getNacionalidade();
@@ -27,7 +27,7 @@
 			(DEFAULT,'$nacionalidade','$nascimento',$altura,$peso,'$categoria',0, 0,0,$habilidade,'$nome','$apelido')";
 			$this->conexao->exec($sql);
 		}
-		//fim da função insert.
+
 
 		//inicio da  função get.
 		public function get($id){
@@ -58,7 +58,4 @@
 		}
 
 	}
-	//fim da classe LutadorCRUD.
-
-
 ?>

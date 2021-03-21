@@ -2,12 +2,13 @@
 	require_once "Lutador.php";
 	require_once "LutadorCRUD.php";
 	$lutadorCRUD = new LutadorCRUD();
+	    
 	//inico da class Luta.
 	class Luta{
 		private $desafiado;
 		private $desafiante;
 		private $ganhador;
-		private $status
+		private $status;
 
 		//Métodos especiais.
 

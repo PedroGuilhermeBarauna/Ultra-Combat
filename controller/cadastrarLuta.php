@@ -1,6 +1,6 @@
 <?php 
 	require_once "../model/lutaCRUD.php";
-	require_once "../model/Luta.php";
+
 
 	$desafiante = $_POST['desafiante'];
 	$desafiado = $_POST['desafiado'];

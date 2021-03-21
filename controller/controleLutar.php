@@ -1,38 +1,24 @@
 <?php  
 	require_once "../model/lutaCRUD.php";
 	require_once "../model/lutadorCRUD.php";
-	$lutadorCRUD = new LutadorCRUD();
-	$lutaCRUD = new lutaCRUD();
-	$nomes = $lutaCRUD->getLutasMarcadas();
-    $contador = count($nomes['desafiantes']);
 
-    $historico = $lutaCRUD->getAll();
+	$LutadorCRUD = new LutadorCRUD();
+	$LutaCRUD = new lutaCRUD();
 
-    $historicoNomes = [
-        "desafiados" => null,
-        "desafiantes" => null,
-        "ganhador" => null
-    ];
+	// Pego todas as lutas marcadas.
+	$desafiantesMarcadas = $LutaCRUD->getDesafiantesMarcadas();
+	$desafiadosMarcadas = $LutaCRUD->getDesafiadosMarcadas();
 
-    $contadorHistorico = count($historico);
-
-    if ($contadorHistorico != 0){
-        $historicoNomes['desafiados'][] = $lutadorCRUD->get($historico[0]['desafiado']);
-        $historicoNomes['desafiantes'][] = $lutadorCRUD->get($historico[0]['desafiante']);
-
-        if ($historico[0]["ganhador"] != null){
-            if ($historico[0]["ganhador"] == $historicoNomes["desafiados"][0]["id"]){
-                $historicoNomes["ganhador"] = $historicoNomes["desafiados"][0]["apelido"];
-            }
-            else {
-                $historicoNomes["ganhador"] = $historicoNomes["desafiantes"][0]["apelido"];
-            }
-        }
+	$contadorLutasMarcadas = count($desafiadosMarcadas);
 
 
-        $historicoNomes["desafiados"] = $historicoNomes["desafiados"][0]["apelido"];
-        $historicoNomes["desafiantes"] = $historicoNomes["desafiantes"][0]["apelido"];
-    }
+    // Pego todas as luta já concluidas e os ganhadores
+    $desafiantesConcluidas = $LutaCRUD->getDesafiantesConcluidas();
+    $desafiadosConcluidas = $LutaCRUD->getDesafiadosConcluidas();
+    $ganhadoresConcluidas = $LutaCRUD->getGanhadoresConcluidas();
+
+    $contadorLutasConcluidas = count($desafiadosConcluidas);
+
 
  ?>
 <div id="tabelaLutar" class="ui two column grid container">
@@ -45,17 +31,15 @@
           <td>Desafiado</td>
           <td class="right aligned">Ganhador</td>
         </tr>
+        <?php
+        for ($i=0; $i < $contadorLutasConcluidas; $i++) {
+        ?>
         <tr>
-          <td><?php echo $historicoNomes['desafiantes']; ?></td>
-          <td><?php echo $historicoNomes["desafiados"];?></td>
-          <td class="right aligned"><?php echo $historicoNomes["ganhador"];?></td>
+          <td><?php echo $desafiantesConcluidas[$i]['apelido']; ?></td>
+          <td><?php echo $desafiadosConcluidas[$i]['apelido']; ?></td>
+          <td class="right aligned"><?php echo $ganhadoresConcluidas[$i]['apelido']; ?></td>
         </tr>
-
-        <tr>
-          <td></td>
-          <td></td>
-          <td class="right aligned"></td>
-        </tr>
+        <?php  } ?>
       </tbody>
     </table>
   </div>
@@ -64,12 +48,12 @@
     <table class="ui selectable inverted table">
       <tbody>
         <?php 
-          for ($i=0; $i < $contador; $i++) { 
+          for ($i=0; $i < $contadorLutasMarcadas; $i++) {
         ?>
           <tr>
-            <td><?php echo $nomes['desafiantes'][$i]; ?></td>
-            <td><?php echo $nomes['desafiados'][$i]; ?></td>
-            <td class="right aligned"><a class="ui red button" href="../controller/lutar.php?lutar=<?php echo $nomes['id'][$i]; ?>">Lutar</a></td>
+            <td><?php echo $desafiantesMarcadas[$i]["apelido"]; ?></td>
+            <td><?php echo $desafiadosMarcadas[$i]["apelido"]; ?></td>
+            <td class="right aligned"><a class="ui red button" href="../controller/lutar.php?lutar=<?php echo $desafiadosMarcadas[$i]['id']; ?>">Lutar</a></td>
           </tr>
         <?php 
           }

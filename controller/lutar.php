@@ -1,7 +1,5 @@
-<?php 
-	require_once "../model/Luta.php";
+<?php
 	require_once "../model/lutaCRUD.php";
-	require_once "../model/Lutador.php";
 	require_once "../model/LutadorCRUD.php";
 	
 	$lutaCRUD = new lutaCRUD();
@@ -43,17 +41,5 @@
 			$lutaCRUD->update($idDesafiado,$_GET["lutar"]);
 		}
 	}
+    header("location: ../view/index.php?");
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<pre>
-		
-		<?php print_r($luta); ?>
-	</pre>
-
-</body>
-</html>
