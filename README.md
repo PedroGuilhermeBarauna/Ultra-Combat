@@ -1,5 +1,5 @@
 # Ultra-Combat #
-Projeto criado com o intuito de aprender mais sobre formato MVC e Jquery.
+Projeto criado em PHP com o intuito de aprender mais sobre formato MVC e Jquery.
 
 ## O que é ? ##
   Consiste em uma plataforma web. O usuário faz o cadastro de lutadores, que são inseridos e salvos no banco de dados. O programa gera a "habilidade" do lutador, com base nas informações inseridas (Peso, idade, altura...).
