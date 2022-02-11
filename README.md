@@ -1,4 +1,4 @@
-# Ultra-Combat #
+# Ultra-Combat (Em andamento) #
 Projeto criado em PHP com o intuito de aprender mais sobre formato MVC e Jquery.
 
 ## O que é ? ##
