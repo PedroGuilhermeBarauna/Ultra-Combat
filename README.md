@@ -13,7 +13,7 @@ Projeto criado em PHP com o intuito de aprender mais sobre formato MVC e Jquery.
 * Executar uma luta
 * Visualizar o histórico de lutas
 
-Técnologias utilizadas
+## Técnologias utilizadas ##
 * PHP - Funcionalidades e comunicação com o banco de dados
 * HTML, CSS, Semantic UI - Layout da página
 * Javascript, Jquery - Interatividade
