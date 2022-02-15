@@ -1,4 +1,4 @@
-![Diagrama Entidade-Relacionamento](https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Pagina%20inicial.PNG = 250x250 )
+![Diagrama Entidade-Relacionamento](https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Pagina%20inicial.PNG {width=40px height=400px})
 
 # Ultra-Combat (Em andamento) #
 Projeto criado em PHP com o intuito de aprender mais sobre formato MVC e Jquery.
