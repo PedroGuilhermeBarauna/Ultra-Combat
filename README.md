@@ -1,5 +1,5 @@
 <img src="https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Pagina%20inicial.PNG" width="700" height="350">
-<img src="https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Cadastrar%20lutador.PNG width="700" height="350 ">
+<img src="https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Cadastrar%20lutador.PNG" width="700" height="350">
 
 
 # Ultra-Combat (Em andamento) #
