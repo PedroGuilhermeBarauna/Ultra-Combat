@@ -1,5 +1,5 @@
 <img src="https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Cadastrar%20lutador.PNG" width="550" height="350">
-<img src="https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Marcar%20luta.PNG" width="700" height="350">
+<img src="https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Marcar%20luta.PNG" width="550" height="350">
 
 # Ultra-Combat (Em andamento) #
 Projeto criado em PHP com o intuito de aprender mais sobre formato MVC e Jquery.
