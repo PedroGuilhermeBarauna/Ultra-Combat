@@ -1,4 +1,4 @@
-![Diagrama Entidade-Relacionamento](https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Pagina%20inicial.PNG)
+![Diagrama Entidade-Relacionamento](https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Pagina%20inicial.PNG  width="480")
 
 <img src="https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Pagina%20inicial.PNG" width="48">
 
