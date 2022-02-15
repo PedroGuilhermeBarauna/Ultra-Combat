@@ -1,5 +1,5 @@
 # Ultra-Combat (Em andamento) #
-Projeto criado em PHP com o intuito de aprender mais sobre formato MVC e Jquery.
+Projeto criado em PHP com o intuito de aprender mais sobre formato MVC e Jquery. Imagens das telas estão na pasta img
 
 ## O que é ? ##
   Consiste em uma plataforma web onde o usuário faz o cadastro de lutadores, que são inseridos e salvos no banco de dados. Tendo no minimo 2 lutadores cadastrados, é possivel marcar uma luta. Através da pagina "Lutar", o usuário poderá visualizar as lutas marcadas e o histórico de lutas. Então ele pode clicar em "Lutar" em uma das lutas marcadas para executar a luta. O programa faz calculos, utilizando fatores como a habilidade, idade, peso, altura, sorte, histórico do lutador (relação entre taxa de vitórias e derrotas), compara os 2 lutadores e anuncia o vencedor, também pode haver um empate. Vale ressaltar que não há recarregamento das paginas quando o usuário navega entre formulários graças ao Jquery.
