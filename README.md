@@ -1,4 +1,4 @@
-<img src="https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Pagina%20inicial.PNG" width="500" height="300">
+<img src="https://github.com/PedroGuilhermeBarauna/Ultra-Combat/blob/main/img/Pagina%20inicial.PNG" width="600" height="350">
 
 # Ultra-Combat (Em andamento) #
 Projeto criado em PHP com o intuito de aprender mais sobre formato MVC e Jquery.
