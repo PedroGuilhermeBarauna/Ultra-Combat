@@ -4,7 +4,6 @@ Projeto criado com o intuito de aprender mais sobre formato MVC e Jquery.
 Projeto criado em PHP com o intuito de aprender mais sobre formato MVC e Jquery. Imagens das telas estão na pasta img
 
 ## O que é ? ##
-<<<<<<< HEAD
   Consiste em uma plataforma web. , que são inseridos e salvos no banco de dados. O programa gera a "habilidade" do lutador, com base nas informações inseridas (Peso, idade, altura...).
   Tendo pelo menos 2 lutadores cadastrados, é possivel marcar uma luta, entre o desafiante e o desafiado, que também é salva no banco de dados.
   Através da pagina "Lutar", o usuário poderá visualizar as lutas marcadas e um relatório do histórico de lutas. 
