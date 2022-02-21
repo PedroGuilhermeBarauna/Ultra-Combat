@@ -1,5 +1,7 @@
 # Ultra-Combat #
 Projeto criado com o intuito de aprender mais sobre formato MVC e Jquery.
+# Ultra-Combat (Em andamento) #
+Projeto criado em PHP com o intuito de aprender mais sobre formato MVC e Jquery. Imagens das telas estão na pasta img
 
 ## O que é ? ##
 <<<<<<< HEAD
