@@ -1,10 +1,11 @@
-<form id="formularioLutador" action="../controller/cadastrarLutador.php" method="post" class="ui form segment">
-  <div class="ui pointing red basic label">
-    Cadastre o seu lutador!
+<form style="margin-top: 5%; max-width: 50%; margin-left: 25%"  id="formularioLutador" action="../controller/cadastrarLutador.php" method="post" class="ui form segment">
+  <div style="margin-bottom: 5%" class="ui pointing red basic label">
+    <h4 >Cadastre o seu lutador!</h4>
   </div>  
   <div class="ui three column grid container">
-    <div class="column">
+
       <div class="two fields">
+          <div class="column">
         <div class=" field">
           <label for="nome">Nome</label>
           <input id="nome" name="nome" type="text" required="nome">
@@ -15,8 +16,9 @@
         </div>
       </div>
     </div>
-    <div class="column">
+
       <div class="two fields">
+          <div class="column">
         <div class=" field">
           <label for="date">Data De Nascimento</label>
           <input id="nascimento" name="nascimento" type="date" required="date">
@@ -40,7 +42,7 @@
       </div>
     </div>
   </div>
-  <button type="submit" class="ui button green">
+  <button style="margin-top: 5%" type="submit" class="ui button green">
     Cadastrar Campeão
   </button>
 </form>

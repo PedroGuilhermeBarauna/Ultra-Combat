@@ -3,26 +3,25 @@
   <head>
     <title>Pagina inicial</title>
     <meta charset="utf-8" />
-    <script type="text/javascript" src="../scripts/jquery.js" ></script>
-    <link rel="stylesheet" type="text/css" href="semantic/semantic.css">
-    <script type="text/javascript" src="semantic/semantic.js"></script>
-    <script type="text/javascript" src="../scripts/script.js"></script>
+      <script type="text/javascript" src="../scripts/jquery.js" ></script>
+      <script type="text/javascript" src="../scripts/script.js"></script>
+      <link rel="stylesheet" type="text/css" href="semantic/semantic.css">
+      <script type="text/javascript" src="semantic/semantic.js"></script>
 
     <style type="text/css">
       .masthead.segment {
-        min-height: 700px;
-        padding: 1em 0em;
+        min-height: 675px;
+        padding: 1em;
       }
-      .pusher {
-          margin-bottom: 30px;
+      #corpoIndex {
+          margin: 25px;
       }
-    </style>
 
+    </style>
   </head>
 
   <body>
-    <div id="menuEcorpo" class="ui inverted vertical masthead center aligned segment">
-      <div class="pusher">
+    <div id="menuCorpo" class="ui inverted masthead center aligned segment">
         <div class="ui container">
             <div class="ui large secondary inverted pointing menu">
             <div class="left item">
@@ -35,7 +34,6 @@
             </div>
           </div>
         </div>
-      </div>
       <div id="corpoIndex">
 
       </div>
